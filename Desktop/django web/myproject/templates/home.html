@@ -1,0 +1,21 @@
+
+{%extends 'base.html' %}
+{% load static %}
+{%block content %}
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<h1>All tasks</h1>
+<div class="container">
+<ul class="ul_class">
+    {%csrf_token %}
+    {%for i in context%}
+    <li><span>&#8213;</span>
+        {{i.id}}
+        {{"&nbsp&nbsp&nbsp&nbsp&nbsp"}}
+        {{ i.description}}</li>
+    {% endfor %}
+</ul>
+</div>
+{% endblock %}
+
+

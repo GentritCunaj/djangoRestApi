@@ -1,0 +1,23 @@
+
+{%extends 'base.html' %}
+
+{%block content %}
+{% load static %}
+<body>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<h1>Report</h1>
+<div class="container">
+
+<ul class="ul_class">
+    {%for i in profiles %}
+    <li><span>&#8213;</span>
+        {{i.id}}
+        {{"&nbsp&nbsp&nbsp&nbsp&nbsp"}}
+        {{ i.description}}</li>
+    {% endfor %}
+{%endblock%}
+</ul>
+</div>
+
+
+

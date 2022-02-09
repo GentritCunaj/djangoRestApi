@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+{%extends 'base.html' %}
+
+{%block content %}
+<title>Update Task</title>
+<h1 class="mt-2">Update task</h1>
+<form action="" method="POST" >
+    {%csrf_token %}
+    {{form}}
+    <input type="submit" name="Submit">
+</form>
+{% endblock %}
